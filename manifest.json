@@ -1,0 +1,2212 @@
+{
+  "title": "Danganronpa Trigger Happy Havoc - Roblox Assets",
+  "repo": "Deadstillplays/DageStanRope",
+  "raw_base": "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main",
+  "local_base": "http://localhost:8089",
+  "backgrounds": {
+    "bgd_002": {
+      "name": "bgd_002",
+      "desc": "Classroom 1-A (Boarded Windows)",
+      "file": "backgrounds/bgd_002.png",
+      "width": 960,
+      "height": 544,
+      "size": 305411
+    },
+    "bgd_003": {
+      "name": "bgd_003",
+      "desc": "Incinerator Room",
+      "file": "backgrounds/bgd_003.png",
+      "width": 960,
+      "height": 544,
+      "size": 279439
+    },
+    "bgd_004": {
+      "name": "bgd_004",
+      "desc": "Hallway Corner",
+      "file": "backgrounds/bgd_004.png",
+      "width": 960,
+      "height": 544,
+      "size": 268560
+    },
+    "bgd_005": {
+      "name": "bgd_005",
+      "desc": "Classroom Desk View",
+      "file": "backgrounds/bgd_005.png",
+      "width": 960,
+      "height": 544,
+      "size": 268084
+    },
+    "bgd_006": {
+      "name": "bgd_006",
+      "desc": "Courthouse Entrance",
+      "file": "backgrounds/bgd_006.png",
+      "width": 960,
+      "height": 544,
+      "size": 306363
+    },
+    "bgd_007": {
+      "name": "bgd_007",
+      "desc": "Library",
+      "file": "backgrounds/bgd_007.png",
+      "width": 960,
+      "height": 544,
+      "size": 254544
+    },
+    "bgd_009": {
+      "name": "bgd_009",
+      "desc": "Dorm Hallway 1F",
+      "file": "backgrounds/bgd_009.png",
+      "width": 960,
+      "height": 544,
+      "size": 361167
+    },
+    "bgd_010": {
+      "name": "bgd_010",
+      "desc": "Dining Hall / Cafeteria",
+      "file": "backgrounds/bgd_010.png",
+      "width": 960,
+      "height": 544,
+      "size": 306363
+    },
+    "bgd_013": {
+      "name": "bgd_013",
+      "desc": "1F Main Hallway",
+      "file": "backgrounds/bgd_013.png",
+      "width": 960,
+      "height": 544,
+      "size": 291399
+    },
+    "bgd_014": {
+      "name": "bgd_014",
+      "desc": "Gymnasium / Entrance Stage",
+      "file": "backgrounds/bgd_014.png",
+      "width": 960,
+      "height": 544,
+      "size": 301031
+    },
+    "bgd_015": {
+      "name": "bgd_015",
+      "desc": "Class Trial Courtroom",
+      "file": "backgrounds/bgd_015.png",
+      "width": 960,
+      "height": 544,
+      "size": 301587
+    },
+    "bgd_017": {
+      "name": "bgd_017",
+      "desc": "AV Room",
+      "file": "backgrounds/bgd_017.png",
+      "width": 960,
+      "height": 544,
+      "size": 194829
+    },
+    "bgd_019": {
+      "name": "bgd_019",
+      "desc": "Dormitory Stairs",
+      "file": "backgrounds/bgd_019.png",
+      "width": 960,
+      "height": 544,
+      "size": 278771
+    },
+    "bgd_020": {
+      "name": "bgd_020",
+      "desc": "Makoto's Dorm Room",
+      "file": "backgrounds/bgd_020.png",
+      "width": 960,
+      "height": 544,
+      "size": 226997
+    },
+    "bgd_021": {
+      "name": "bgd_021",
+      "desc": "Dorm Bathroom",
+      "file": "backgrounds/bgd_021.png",
+      "width": 960,
+      "height": 544,
+      "size": 350851
+    },
+    "bgd_022": {
+      "name": "bgd_022",
+      "desc": "Headmaster's Office",
+      "file": "backgrounds/bgd_022.png",
+      "width": 960,
+      "height": 544,
+      "size": 247204
+    },
+    "bgd_024": {
+      "name": "bgd_024",
+      "desc": "Data Center / Control Room",
+      "file": "backgrounds/bgd_024.png",
+      "width": 960,
+      "height": 544,
+      "size": 225657
+    },
+    "bgd_025": {
+      "name": "bgd_025",
+      "desc": "Sauna / Bath",
+      "file": "backgrounds/bgd_025.png",
+      "width": 960,
+      "height": 544,
+      "size": 228046
+    },
+    "bgd_026": {
+      "name": "bgd_026",
+      "desc": "Locker Room",
+      "file": "backgrounds/bgd_026.png",
+      "width": 960,
+      "height": 544,
+      "size": 254297
+    },
+    "bgd_027": {
+      "name": "bgd_027",
+      "desc": "Archive Room",
+      "file": "backgrounds/bgd_027.png",
+      "width": 960,
+      "height": 544,
+      "size": 249668
+    },
+    "bgd_028": {
+      "name": "bgd_028",
+      "desc": "Trash Room Gate",
+      "file": "backgrounds/bgd_028.png",
+      "width": 960,
+      "height": 544,
+      "size": 233277
+    },
+    "bgd_029": {
+      "name": "bgd_029",
+      "desc": "Kitchen",
+      "file": "backgrounds/bgd_029.png",
+      "width": 960,
+      "height": 544,
+      "size": 254297
+    },
+    "bgd_030": {
+      "name": "bgd_030",
+      "desc": "Hope's Peak School Exterior",
+      "file": "backgrounds/bgd_030.png",
+      "width": 960,
+      "height": 544,
+      "size": 233277
+    },
+    "bgd_031": {
+      "name": "bgd_031",
+      "desc": "School Courtyard",
+      "file": "backgrounds/bgd_031.png",
+      "width": 960,
+      "height": 544,
+      "size": 324219
+    },
+    "bgd_032": {
+      "name": "bgd_032",
+      "desc": "Laundry Room",
+      "file": "backgrounds/bgd_032.png",
+      "width": 960,
+      "height": 544,
+      "size": 240476
+    },
+    "bgd_033": {
+      "name": "bgd_033",
+      "desc": "Pool",
+      "file": "backgrounds/bgd_033.png",
+      "width": 960,
+      "height": 544,
+      "size": 282410
+    }
+  },
+  "characters": {
+    "chihiro_fujisaki": {
+      "id": "10",
+      "name": "Chihiro Fujisaki",
+      "sprites": {
+        "10": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 107831
+        },
+        "11": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 110135
+        },
+        "12": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 131325
+        },
+        "13": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 108562
+        },
+        "14": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 117405
+        },
+        "15": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 110514
+        },
+        "16": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 177018
+        },
+        "19": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_19.png",
+          "width": 960,
+          "height": 560,
+          "size": 128825
+        },
+        "20": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_20.png",
+          "width": 960,
+          "height": 560,
+          "size": 130503
+        },
+        "21": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_21.png",
+          "width": 960,
+          "height": 560,
+          "size": 104123
+        },
+        "22": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_22.png",
+          "width": 960,
+          "height": 560,
+          "size": 124992
+        },
+        "23": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_23.png",
+          "width": 960,
+          "height": 560,
+          "size": 134732
+        },
+        "24": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_24.png",
+          "width": 960,
+          "height": 560,
+          "size": 108250
+        },
+        "25": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_25.png",
+          "width": 960,
+          "height": 560,
+          "size": 148080
+        },
+        "26": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_26.png",
+          "width": 960,
+          "height": 560,
+          "size": 147779
+        },
+        "27": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_27.png",
+          "width": 960,
+          "height": 560,
+          "size": 117502
+        },
+        "28": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_28.png",
+          "width": 960,
+          "height": 560,
+          "size": 116870
+        },
+        "29": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_29.png",
+          "width": 960,
+          "height": 560,
+          "size": 104712
+        },
+        "30": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_30.png",
+          "width": 960,
+          "height": 560,
+          "size": 104537
+        },
+        "00": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 114810
+        },
+        "01": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 115372
+        },
+        "02": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 112950
+        },
+        "03": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 108798
+        },
+        "04": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 113646
+        },
+        "05": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 137542
+        },
+        "06": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 111388
+        },
+        "07": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 159287
+        },
+        "08": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 132085
+        },
+        "09": {
+          "file": "characters/chihiro_fujisaki/chihiro_fujisaki_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 114781
+        }
+      }
+    },
+    "mondo_owada": {
+      "id": "11",
+      "name": "Mondo Owada",
+      "sprites": {
+        "10": {
+          "file": "characters/mondo_owada/mondo_owada_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 279532
+        },
+        "11": {
+          "file": "characters/mondo_owada/mondo_owada_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 259303
+        },
+        "00": {
+          "file": "characters/mondo_owada/mondo_owada_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 277725
+        },
+        "01": {
+          "file": "characters/mondo_owada/mondo_owada_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 268548
+        },
+        "02": {
+          "file": "characters/mondo_owada/mondo_owada_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 255042
+        },
+        "03": {
+          "file": "characters/mondo_owada/mondo_owada_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 254887
+        },
+        "04": {
+          "file": "characters/mondo_owada/mondo_owada_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 274617
+        },
+        "05": {
+          "file": "characters/mondo_owada/mondo_owada_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 227552
+        },
+        "06": {
+          "file": "characters/mondo_owada/mondo_owada_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 210099
+        },
+        "07": {
+          "file": "characters/mondo_owada/mondo_owada_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 255554
+        },
+        "08": {
+          "file": "characters/mondo_owada/mondo_owada_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 301492
+        },
+        "09": {
+          "file": "characters/mondo_owada/mondo_owada_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 259786
+        }
+      }
+    },
+    "kiyotaka_ishimaru": {
+      "id": "12",
+      "name": "Kiyotaka Ishimaru",
+      "sprites": {
+        "10": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 296357
+        },
+        "11": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 235368
+        },
+        "12": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 220582
+        },
+        "13": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 253969
+        },
+        "14": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 237067
+        },
+        "15": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 234183
+        },
+        "16": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 255876
+        },
+        "00": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 252834
+        },
+        "01": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 254619
+        },
+        "02": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 250658
+        },
+        "03": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 231487
+        },
+        "04": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 223438
+        },
+        "05": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 251802
+        },
+        "06": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 242031
+        },
+        "07": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 228131
+        },
+        "08": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 212301
+        },
+        "09": {
+          "file": "characters/kiyotaka_ishimaru/kiyotaka_ishimaru_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 295819
+        }
+      }
+    },
+    "hifumi_yamada": {
+      "id": "13",
+      "name": "Hifumi Yamada",
+      "sprites": {
+        "00": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 197791
+        },
+        "01": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 198106
+        },
+        "02": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 198117
+        },
+        "03": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 189705
+        },
+        "04": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 191472
+        },
+        "05": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 198167
+        },
+        "06": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 200540
+        },
+        "07": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 195023
+        },
+        "08": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 191136
+        },
+        "09": {
+          "file": "characters/hifumi_yamada/hifumi_yamada_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 200548
+        }
+      }
+    },
+    "celestia_ludenberg": {
+      "id": "14",
+      "name": "Celestia Ludenberg",
+      "sprites": {
+        "10": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 106327
+        },
+        "11": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 105240
+        },
+        "12": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 107089
+        },
+        "13": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 106053
+        },
+        "14": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 105586
+        },
+        "15": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 106036
+        },
+        "00": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 108361
+        },
+        "01": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 104390
+        },
+        "02": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 103117
+        },
+        "03": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 101246
+        },
+        "04": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 103468
+        },
+        "05": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 104944
+        },
+        "06": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 105770
+        },
+        "07": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 105974
+        },
+        "08": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 106297
+        },
+        "09": {
+          "file": "characters/celestia_ludenberg/celestia_ludenberg_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 105392
+        }
+      }
+    },
+    "junko_enoshima": {
+      "id": "15",
+      "name": "Junko Enoshima",
+      "sprites": {
+        "10": {
+          "file": "characters/junko_enoshima/junko_enoshima_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 132488
+        },
+        "11": {
+          "file": "characters/junko_enoshima/junko_enoshima_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 223677
+        },
+        "12": {
+          "file": "characters/junko_enoshima/junko_enoshima_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 115159
+        },
+        "13": {
+          "file": "characters/junko_enoshima/junko_enoshima_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 131643
+        },
+        "14": {
+          "file": "characters/junko_enoshima/junko_enoshima_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "15": {
+          "file": "characters/junko_enoshima/junko_enoshima_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "16": {
+          "file": "characters/junko_enoshima/junko_enoshima_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "17": {
+          "file": "characters/junko_enoshima/junko_enoshima_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "18": {
+          "file": "characters/junko_enoshima/junko_enoshima_18.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "19": {
+          "file": "characters/junko_enoshima/junko_enoshima_19.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "20": {
+          "file": "characters/junko_enoshima/junko_enoshima_20.png",
+          "width": 960,
+          "height": 560,
+          "size": 73095
+        },
+        "00": {
+          "file": "characters/junko_enoshima/junko_enoshima_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 131802
+        },
+        "01": {
+          "file": "characters/junko_enoshima/junko_enoshima_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 111778
+        },
+        "02": {
+          "file": "characters/junko_enoshima/junko_enoshima_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 110763
+        },
+        "03": {
+          "file": "characters/junko_enoshima/junko_enoshima_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 126173
+        },
+        "04": {
+          "file": "characters/junko_enoshima/junko_enoshima_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 116296
+        },
+        "05": {
+          "file": "characters/junko_enoshima/junko_enoshima_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 134035
+        },
+        "06": {
+          "file": "characters/junko_enoshima/junko_enoshima_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 109371
+        },
+        "07": {
+          "file": "characters/junko_enoshima/junko_enoshima_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 101147
+        },
+        "08": {
+          "file": "characters/junko_enoshima/junko_enoshima_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 137104
+        },
+        "09": {
+          "file": "characters/junko_enoshima/junko_enoshima_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 132404
+        }
+      }
+    },
+    "mukuro_ikusa": {
+      "id": "16",
+      "name": "Mukuro Ikusaba",
+      "sprites": {
+        "00": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 199962
+        },
+        "01": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 201192
+        },
+        "02": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 221025
+        },
+        "03": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 147299
+        },
+        "04": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 156967
+        },
+        "05": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 173542
+        },
+        "06": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 177119
+        },
+        "07": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 195443
+        },
+        "08": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 211911
+        },
+        "09": {
+          "file": "characters/mukuro_ikusa/mukuro_ikusa_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 194101
+        }
+      }
+    },
+    "monokuma": {
+      "id": "17",
+      "name": "Monokuma",
+      "sprites": {
+        "00": {
+          "file": "characters/monokuma/monokuma_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 89282
+        },
+        "01": {
+          "file": "characters/monokuma/monokuma_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 86486
+        },
+        "02": {
+          "file": "characters/monokuma/monokuma_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 89801
+        },
+        "03": {
+          "file": "characters/monokuma/monokuma_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 91035
+        },
+        "04": {
+          "file": "characters/monokuma/monokuma_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 91485
+        },
+        "05": {
+          "file": "characters/monokuma/monokuma_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 86169
+        },
+        "06": {
+          "file": "characters/monokuma/monokuma_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 87957
+        },
+        "07": {
+          "file": "characters/monokuma/monokuma_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 87975
+        },
+        "08": {
+          "file": "characters/monokuma/monokuma_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 95467
+        }
+      }
+    },
+    "makoto_naegi": {
+      "id": "00",
+      "name": "Makoto Naegi",
+      "sprites": {
+        "00": {
+          "file": "characters/makoto_naegi/makoto_naegi_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 140507
+        },
+        "01": {
+          "file": "characters/makoto_naegi/makoto_naegi_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 138711
+        }
+      }
+    },
+    "sayaka_maizono": {
+      "id": "01",
+      "name": "Sayaka Maizono",
+      "sprites": {
+        "10": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 138336
+        },
+        "11": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 121044
+        },
+        "12": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 137629
+        },
+        "13": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 156003
+        },
+        "14": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 119044
+        },
+        "15": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 121196
+        },
+        "16": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 134036
+        },
+        "17": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 151119
+        },
+        "18": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_18.png",
+          "width": 960,
+          "height": 560,
+          "size": 133571
+        },
+        "19": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_19.png",
+          "width": 960,
+          "height": 560,
+          "size": 137506
+        },
+        "20": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_20.png",
+          "width": 960,
+          "height": 560,
+          "size": 147866
+        },
+        "21": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_21.png",
+          "width": 960,
+          "height": 560,
+          "size": 139245
+        },
+        "22": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_22.png",
+          "width": 960,
+          "height": 560,
+          "size": 134859
+        },
+        "23": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_23.png",
+          "width": 960,
+          "height": 560,
+          "size": 151165
+        },
+        "00": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 131122
+        },
+        "01": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 132765
+        },
+        "02": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 151987
+        },
+        "03": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 150924
+        },
+        "04": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 148573
+        },
+        "05": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 153700
+        },
+        "06": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 126939
+        },
+        "07": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 141845
+        },
+        "08": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 137979
+        },
+        "09": {
+          "file": "characters/sayaka_maizono/sayaka_maizono_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 144122
+        }
+      }
+    },
+    "kyoko_kirigiri": {
+      "id": "02",
+      "name": "Kyoko Kirigiri",
+      "sprites": {
+        "10": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 147263
+        },
+        "11": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 128328
+        },
+        "12": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 155553
+        },
+        "13": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 130274
+        },
+        "14": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 126055
+        },
+        "15": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 127639
+        },
+        "16": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 146603
+        },
+        "17": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 150936
+        },
+        "18": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_18.png",
+          "width": 960,
+          "height": 560,
+          "size": 151862
+        },
+        "00": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 128466
+        },
+        "01": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 127667
+        },
+        "02": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 128041
+        },
+        "03": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 151093
+        },
+        "04": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 152238
+        },
+        "05": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 147574
+        },
+        "06": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 125519
+        },
+        "07": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 134960
+        },
+        "08": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 134466
+        },
+        "09": {
+          "file": "characters/kyoko_kirigiri/kyoko_kirigiri_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 134085
+        }
+      }
+    },
+    "byakuya_togami": {
+      "id": "03",
+      "name": "Byakuya Togami",
+      "sprites": {
+        "10": {
+          "file": "characters/byakuya_togami/byakuya_togami_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 148817
+        },
+        "11": {
+          "file": "characters/byakuya_togami/byakuya_togami_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 171222
+        },
+        "12": {
+          "file": "characters/byakuya_togami/byakuya_togami_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 169578
+        },
+        "13": {
+          "file": "characters/byakuya_togami/byakuya_togami_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 169032
+        },
+        "14": {
+          "file": "characters/byakuya_togami/byakuya_togami_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 176333
+        },
+        "15": {
+          "file": "characters/byakuya_togami/byakuya_togami_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 185287
+        },
+        "16": {
+          "file": "characters/byakuya_togami/byakuya_togami_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 151997
+        },
+        "17": {
+          "file": "characters/byakuya_togami/byakuya_togami_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 152612
+        },
+        "00": {
+          "file": "characters/byakuya_togami/byakuya_togami_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 159012
+        },
+        "01": {
+          "file": "characters/byakuya_togami/byakuya_togami_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 159364
+        },
+        "02": {
+          "file": "characters/byakuya_togami/byakuya_togami_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 158055
+        },
+        "03": {
+          "file": "characters/byakuya_togami/byakuya_togami_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 164835
+        },
+        "04": {
+          "file": "characters/byakuya_togami/byakuya_togami_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 163341
+        },
+        "05": {
+          "file": "characters/byakuya_togami/byakuya_togami_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 152936
+        },
+        "06": {
+          "file": "characters/byakuya_togami/byakuya_togami_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 156089
+        },
+        "07": {
+          "file": "characters/byakuya_togami/byakuya_togami_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 162917
+        },
+        "08": {
+          "file": "characters/byakuya_togami/byakuya_togami_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 162440
+        },
+        "09": {
+          "file": "characters/byakuya_togami/byakuya_togami_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 161666
+        }
+      }
+    },
+    "toko_fukawa": {
+      "id": "04",
+      "name": "Toko Fukawa",
+      "sprites": {
+        "10": {
+          "file": "characters/toko_fukawa/toko_fukawa_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 151639
+        },
+        "11": {
+          "file": "characters/toko_fukawa/toko_fukawa_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 178103
+        },
+        "12": {
+          "file": "characters/toko_fukawa/toko_fukawa_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 171560
+        },
+        "13": {
+          "file": "characters/toko_fukawa/toko_fukawa_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 170969
+        },
+        "14": {
+          "file": "characters/toko_fukawa/toko_fukawa_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 166034
+        },
+        "00": {
+          "file": "characters/toko_fukawa/toko_fukawa_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 165765
+        },
+        "01": {
+          "file": "characters/toko_fukawa/toko_fukawa_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 148669
+        },
+        "02": {
+          "file": "characters/toko_fukawa/toko_fukawa_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 172591
+        },
+        "03": {
+          "file": "characters/toko_fukawa/toko_fukawa_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 170258
+        },
+        "04": {
+          "file": "characters/toko_fukawa/toko_fukawa_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 175013
+        },
+        "05": {
+          "file": "characters/toko_fukawa/toko_fukawa_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 164952
+        },
+        "06": {
+          "file": "characters/toko_fukawa/toko_fukawa_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 165589
+        },
+        "07": {
+          "file": "characters/toko_fukawa/toko_fukawa_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 160144
+        },
+        "08": {
+          "file": "characters/toko_fukawa/toko_fukawa_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 153298
+        },
+        "09": {
+          "file": "characters/toko_fukawa/toko_fukawa_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 196649
+        }
+      }
+    },
+    "genocider_jack": {
+      "id": "05",
+      "name": "Genocider Jack",
+      "sprites": {
+        "10": {
+          "file": "characters/genocider_jack/genocider_jack_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 191655
+        },
+        "11": {
+          "file": "characters/genocider_jack/genocider_jack_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 190172
+        },
+        "12": {
+          "file": "characters/genocider_jack/genocider_jack_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 182000
+        },
+        "13": {
+          "file": "characters/genocider_jack/genocider_jack_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 160757
+        },
+        "14": {
+          "file": "characters/genocider_jack/genocider_jack_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 172665
+        },
+        "15": {
+          "file": "characters/genocider_jack/genocider_jack_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 170079
+        },
+        "16": {
+          "file": "characters/genocider_jack/genocider_jack_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 181472
+        },
+        "17": {
+          "file": "characters/genocider_jack/genocider_jack_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 184196
+        },
+        "18": {
+          "file": "characters/genocider_jack/genocider_jack_18.png",
+          "width": 960,
+          "height": 560,
+          "size": 176921
+        },
+        "19": {
+          "file": "characters/genocider_jack/genocider_jack_19.png",
+          "width": 960,
+          "height": 560,
+          "size": 176114
+        },
+        "20": {
+          "file": "characters/genocider_jack/genocider_jack_20.png",
+          "width": 960,
+          "height": 560,
+          "size": 210638
+        },
+        "21": {
+          "file": "characters/genocider_jack/genocider_jack_21.png",
+          "width": 960,
+          "height": 560,
+          "size": 172665
+        },
+        "00": {
+          "file": "characters/genocider_jack/genocider_jack_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 184859
+        },
+        "01": {
+          "file": "characters/genocider_jack/genocider_jack_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 186036
+        },
+        "02": {
+          "file": "characters/genocider_jack/genocider_jack_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 186683
+        },
+        "03": {
+          "file": "characters/genocider_jack/genocider_jack_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 208562
+        },
+        "04": {
+          "file": "characters/genocider_jack/genocider_jack_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 186872
+        },
+        "05": {
+          "file": "characters/genocider_jack/genocider_jack_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 172770
+        },
+        "06": {
+          "file": "characters/genocider_jack/genocider_jack_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 173608
+        },
+        "07": {
+          "file": "characters/genocider_jack/genocider_jack_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 167022
+        },
+        "08": {
+          "file": "characters/genocider_jack/genocider_jack_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 179749
+        },
+        "09": {
+          "file": "characters/genocider_jack/genocider_jack_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 170851
+        }
+      }
+    },
+    "aoi_asahina": {
+      "id": "06",
+      "name": "Aoi Asahina",
+      "sprites": {
+        "10": {
+          "file": "characters/aoi_asahina/aoi_asahina_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 226335
+        },
+        "11": {
+          "file": "characters/aoi_asahina/aoi_asahina_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 227503
+        },
+        "12": {
+          "file": "characters/aoi_asahina/aoi_asahina_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 217786
+        },
+        "13": {
+          "file": "characters/aoi_asahina/aoi_asahina_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 223922
+        },
+        "14": {
+          "file": "characters/aoi_asahina/aoi_asahina_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 234127
+        },
+        "15": {
+          "file": "characters/aoi_asahina/aoi_asahina_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 228763
+        },
+        "16": {
+          "file": "characters/aoi_asahina/aoi_asahina_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 198861
+        },
+        "17": {
+          "file": "characters/aoi_asahina/aoi_asahina_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 232348
+        },
+        "00": {
+          "file": "characters/aoi_asahina/aoi_asahina_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 224333
+        },
+        "01": {
+          "file": "characters/aoi_asahina/aoi_asahina_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 231996
+        },
+        "02": {
+          "file": "characters/aoi_asahina/aoi_asahina_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 226138
+        },
+        "03": {
+          "file": "characters/aoi_asahina/aoi_asahina_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 224054
+        },
+        "04": {
+          "file": "characters/aoi_asahina/aoi_asahina_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 230194
+        },
+        "05": {
+          "file": "characters/aoi_asahina/aoi_asahina_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 239444
+        },
+        "06": {
+          "file": "characters/aoi_asahina/aoi_asahina_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 230560
+        },
+        "07": {
+          "file": "characters/aoi_asahina/aoi_asahina_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 242174
+        },
+        "08": {
+          "file": "characters/aoi_asahina/aoi_asahina_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 232551
+        },
+        "09": {
+          "file": "characters/aoi_asahina/aoi_asahina_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 212595
+        }
+      }
+    },
+    "yasuhiro_hagakure": {
+      "id": "07",
+      "name": "Yasuhiro Hagakure",
+      "sprites": {
+        "10": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 117313
+        },
+        "11": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 166361
+        },
+        "12": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 125825
+        },
+        "13": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 130842
+        },
+        "14": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 118098
+        },
+        "15": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 118705
+        },
+        "16": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 118195
+        },
+        "00": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 115211
+        },
+        "01": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 123934
+        },
+        "02": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 123760
+        },
+        "03": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 114120
+        },
+        "04": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 119324
+        },
+        "05": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 115874
+        },
+        "06": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 122097
+        },
+        "07": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 130807
+        },
+        "08": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 126184
+        },
+        "09": {
+          "file": "characters/yasuhiro_hagakure/yasuhiro_hagakure_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 120494
+        }
+      }
+    },
+    "sakura_ogami": {
+      "id": "08",
+      "name": "Sakura Ogami",
+      "sprites": {
+        "10": {
+          "file": "characters/sakura_ogami/sakura_ogami_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 151669
+        },
+        "11": {
+          "file": "characters/sakura_ogami/sakura_ogami_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 151302
+        },
+        "12": {
+          "file": "characters/sakura_ogami/sakura_ogami_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 151929
+        },
+        "13": {
+          "file": "characters/sakura_ogami/sakura_ogami_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 151621
+        },
+        "14": {
+          "file": "characters/sakura_ogami/sakura_ogami_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 150692
+        },
+        "15": {
+          "file": "characters/sakura_ogami/sakura_ogami_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 161786
+        },
+        "16": {
+          "file": "characters/sakura_ogami/sakura_ogami_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 172393
+        },
+        "17": {
+          "file": "characters/sakura_ogami/sakura_ogami_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 183594
+        },
+        "18": {
+          "file": "characters/sakura_ogami/sakura_ogami_18.png",
+          "width": 960,
+          "height": 560,
+          "size": 172071
+        },
+        "19": {
+          "file": "characters/sakura_ogami/sakura_ogami_19.png",
+          "width": 960,
+          "height": 560,
+          "size": 184668
+        },
+        "00": {
+          "file": "characters/sakura_ogami/sakura_ogami_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 180126
+        },
+        "01": {
+          "file": "characters/sakura_ogami/sakura_ogami_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 156874
+        },
+        "02": {
+          "file": "characters/sakura_ogami/sakura_ogami_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 158694
+        },
+        "03": {
+          "file": "characters/sakura_ogami/sakura_ogami_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 158268
+        },
+        "04": {
+          "file": "characters/sakura_ogami/sakura_ogami_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 170974
+        },
+        "05": {
+          "file": "characters/sakura_ogami/sakura_ogami_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 170916
+        },
+        "06": {
+          "file": "characters/sakura_ogami/sakura_ogami_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 154828
+        },
+        "07": {
+          "file": "characters/sakura_ogami/sakura_ogami_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 153817
+        },
+        "08": {
+          "file": "characters/sakura_ogami/sakura_ogami_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 172943
+        },
+        "09": {
+          "file": "characters/sakura_ogami/sakura_ogami_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 188047
+        }
+      }
+    },
+    "leon_kuwata": {
+      "id": "09",
+      "name": "Leon Kuwata",
+      "sprites": {
+        "10": {
+          "file": "characters/leon_kuwata/leon_kuwata_10.png",
+          "width": 960,
+          "height": 560,
+          "size": 105234
+        },
+        "11": {
+          "file": "characters/leon_kuwata/leon_kuwata_11.png",
+          "width": 960,
+          "height": 560,
+          "size": 109382
+        },
+        "12": {
+          "file": "characters/leon_kuwata/leon_kuwata_12.png",
+          "width": 960,
+          "height": 560,
+          "size": 104854
+        },
+        "13": {
+          "file": "characters/leon_kuwata/leon_kuwata_13.png",
+          "width": 960,
+          "height": 560,
+          "size": 107255
+        },
+        "14": {
+          "file": "characters/leon_kuwata/leon_kuwata_14.png",
+          "width": 960,
+          "height": 560,
+          "size": 118607
+        },
+        "15": {
+          "file": "characters/leon_kuwata/leon_kuwata_15.png",
+          "width": 960,
+          "height": 560,
+          "size": 123198
+        },
+        "16": {
+          "file": "characters/leon_kuwata/leon_kuwata_16.png",
+          "width": 960,
+          "height": 560,
+          "size": 123568
+        },
+        "17": {
+          "file": "characters/leon_kuwata/leon_kuwata_17.png",
+          "width": 960,
+          "height": 560,
+          "size": 118619
+        },
+        "18": {
+          "file": "characters/leon_kuwata/leon_kuwata_18.png",
+          "width": 960,
+          "height": 560,
+          "size": 101876
+        },
+        "19": {
+          "file": "characters/leon_kuwata/leon_kuwata_19.png",
+          "width": 960,
+          "height": 560,
+          "size": 102291
+        },
+        "20": {
+          "file": "characters/leon_kuwata/leon_kuwata_20.png",
+          "width": 960,
+          "height": 560,
+          "size": 106064
+        },
+        "21": {
+          "file": "characters/leon_kuwata/leon_kuwata_21.png",
+          "width": 960,
+          "height": 560,
+          "size": 107820
+        },
+        "22": {
+          "file": "characters/leon_kuwata/leon_kuwata_22.png",
+          "width": 960,
+          "height": 560,
+          "size": 119529
+        },
+        "23": {
+          "file": "characters/leon_kuwata/leon_kuwata_23.png",
+          "width": 960,
+          "height": 560,
+          "size": 106367
+        },
+        "00": {
+          "file": "characters/leon_kuwata/leon_kuwata_00.png",
+          "width": 960,
+          "height": 560,
+          "size": 108027
+        },
+        "01": {
+          "file": "characters/leon_kuwata/leon_kuwata_01.png",
+          "width": 960,
+          "height": 560,
+          "size": 107865
+        },
+        "02": {
+          "file": "characters/leon_kuwata/leon_kuwata_02.png",
+          "width": 960,
+          "height": 560,
+          "size": 108629
+        },
+        "03": {
+          "file": "characters/leon_kuwata/leon_kuwata_03.png",
+          "width": 960,
+          "height": 560,
+          "size": 107347
+        },
+        "04": {
+          "file": "characters/leon_kuwata/leon_kuwata_04.png",
+          "width": 960,
+          "height": 560,
+          "size": 108296
+        },
+        "05": {
+          "file": "characters/leon_kuwata/leon_kuwata_05.png",
+          "width": 960,
+          "height": 560,
+          "size": 112960
+        },
+        "06": {
+          "file": "characters/leon_kuwata/leon_kuwata_06.png",
+          "width": 960,
+          "height": 560,
+          "size": 104707
+        },
+        "07": {
+          "file": "characters/leon_kuwata/leon_kuwata_07.png",
+          "width": 960,
+          "height": 560,
+          "size": 108739
+        },
+        "08": {
+          "file": "characters/leon_kuwata/leon_kuwata_08.png",
+          "width": 960,
+          "height": 560,
+          "size": 118072
+        },
+        "09": {
+          "file": "characters/leon_kuwata/leon_kuwata_09.png",
+          "width": 960,
+          "height": 560,
+          "size": 107341
+        }
+      }
+    }
+  },
+  "audio": {
+    "text_click.wav": {
+      "file": "audio/sfx/text_click.wav",
+      "size": 11660
+    },
+    "select.wav": {
+      "file": "audio/sfx/select.wav",
+      "size": 64687
+    },
+    "confirm.wav": {
+      "file": "audio/sfx/confirm.wav",
+      "size": 50294
+    },
+    "cancel.wav": {
+      "file": "audio/sfx/cancel.wav",
+      "size": 20973
+    },
+    "page_turn.wav": {
+      "file": "audio/sfx/page_turn.wav",
+      "size": 22854
+    },
+    "door_open.wav": {
+      "file": "audio/sfx/door_open.wav",
+      "size": 33021
+    },
+    "door_close.wav": {
+      "file": "audio/sfx/door_close.wav",
+      "size": 20737
+    },
+    "shock_sting.wav": {
+      "file": "audio/sfx/shock_sting.wav",
+      "size": 19940
+    },
+    "heartbeat.wav": {
+      "file": "audio/sfx/heartbeat.wav",
+      "size": 64060
+    },
+    "chime.wav": {
+      "file": "audio/sfx/chime.wav",
+      "size": 18214
+    },
+    "objection.wav": {
+      "file": "audio/sfx/objection.wav",
+      "size": 23814
+    },
+    "gavel.wav": {
+      "file": "audio/sfx/gavel.wav",
+      "size": 53960
+    },
+    "monokuma_laugh.wav": {
+      "file": "audio/sfx/monokuma_laugh.wav",
+      "size": 26492
+    }
+  },
+  "scripts": {
+    "prologue_entrance": {
+      "file": "scripts/prologue_entrance.json",
+      "stepsCount": 95
+    },
+    "prologue_hall_meeting": {
+      "file": "scripts/prologue_hall_meeting.json",
+      "stepsCount": 447
+    },
+    "prologue_gym_monokuma": {
+      "file": "scripts/prologue_gym_monokuma.json",
+      "stepsCount": 197
+    }
+  }
+}
