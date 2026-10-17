@@ -4,8 +4,8 @@
 		<Properties>
 			<string name="Name">DanganronpaClient</string>
 			<ProtectedString name="Source"><![CDATA[--!strict
--- Danganronpa: Trigger Happy Havoc - Complete Client Engine for Roblox
--- Runs in StarterGui or StarterPlayerScripts
+-- Danganronpa: Trigger Happy Havoc - Complete Native Client for Roblox Studio
+-- Powered by EditableImage and Luau
 
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
@@ -22,7 +22,7 @@ print("=================================================================")
 print("  Danganronpa: Trigger Happy Havoc - Starting Native Engine")
 print("=================================================================")
 
--- Ensure existing GUI is cleaned up
+-- Clean up any existing instances
 local oldGui = PlayerGui:FindFirstChild("DanganronpaGui")
 if oldGui then oldGui:Destroy() end
 
@@ -50,58 +50,71 @@ uiAspectRatio.AspectType = Enum.AspectType.FitWithinMaxSize
 uiAspectRatio.DominantAxis = Enum.DominantAxis.Width
 uiAspectRatio.Parent = viewportFrame
 
--- 3. Layer 1: Background Layer (ImageLabel + EditableImage support)
-local backgroundLabel = Instance.new("ImageLabel")
-backgroundLabel.Name = "BackgroundLabel"
-backgroundLabel.Size = UDim2.new(1, 0, 1, 0)
-backgroundLabel.Position = UDim2.new(0, 0, 0, 0)
-backgroundLabel.BackgroundColor3 = Color3.fromRGB(16, 12, 20)
-backgroundLabel.BorderSizePixel = 0
-backgroundLabel.ScaleType = Enum.ScaleType.Crop
-backgroundLabel.Image = "rbxassetid://138579744212785" -- Classroom / Background default
-backgroundLabel.Parent = viewportFrame
-
--- Dynamic EditableImage Canvas Layer
+-- 3. Layer 1: Background & EditableImage Canvas
 local canvasLabel = Instance.new("ImageLabel")
 canvasLabel.Name = "CanvasLabel"
 canvasLabel.Size = UDim2.new(1, 0, 1, 0)
 canvasLabel.Position = UDim2.new(0, 0, 0, 0)
-canvasLabel.BackgroundTransparency = 1
+canvasLabel.BackgroundColor3 = Color3.fromRGB(16, 12, 22)
 canvasLabel.BorderSizePixel = 0
 canvasLabel.ScaleType = Enum.ScaleType.Stretch
-canvasLabel.ZIndex = 2
+canvasLabel.ZIndex = 1
 canvasLabel.Parent = viewportFrame
 
-local editableImage = nil :: EditableImage?
+-- Fallback ImageLabel for native Roblox asset IDs
+local bgImageLabel = Instance.new("ImageLabel")
+bgImageLabel.Name = "BgImageLabel"
+bgImageLabel.Size = UDim2.new(1, 0, 1, 0)
+bgImageLabel.Position = UDim2.new(0, 0, 0, 0)
+bgImageLabel.BackgroundTransparency = 1
+bgImageLabel.BorderSizePixel = 0
+bgImageLabel.ScaleType = Enum.ScaleType.Crop
+bgImageLabel.ZIndex = 2
+bgImageLabel.Parent = viewportFrame
+
+-- Character Sprite ImageLabel (Center Stage)
+local characterLabel = Instance.new("ImageLabel")
+characterLabel.Name = "CharacterLabel"
+characterLabel.Size = UDim2.new(0.68, 0, 0.95, 0)
+characterLabel.AnchorPoint = Vector2.new(0.5, 1)
+characterLabel.Position = UDim2.new(0.5, 0, 1.05, 0)
+characterLabel.BackgroundTransparency = 1
+characterLabel.BorderSizePixel = 0
+characterLabel.ScaleType = Enum.ScaleType.Fit
+characterLabel.ZIndex = 4
+characterLabel.Parent = viewportFrame
+
+-- Character EditableImage Layer (if streaming raw pixels)
+local charCanvasLabel = Instance.new("ImageLabel")
+charCanvasLabel.Name = "CharCanvasLabel"
+charCanvasLabel.Size = UDim2.new(0.68, 0, 0.95, 0)
+charCanvasLabel.AnchorPoint = Vector2.new(0.5, 1)
+charCanvasLabel.Position = UDim2.new(0.5, 0, 1.05, 0)
+charCanvasLabel.BackgroundTransparency = 1
+charCanvasLabel.BorderSizePixel = 0
+charCanvasLabel.ScaleType = Enum.ScaleType.Fit
+charCanvasLabel.ZIndex = 5
+charCanvasLabel.Parent = viewportFrame
+
+-- Create Native EditableImages
+local bgEditable = nil :: EditableImage?
+local charEditable = nil :: EditableImage?
+
 pcall(function()
-    editableImage = AssetService:CreateEditableImage({ Size = Vector2.new(960, 544) })
-    if editableImage then
-        canvasLabel.ImageContent = Content.fromObject(editableImage)
-        editableImage:DrawRectangle(Vector2.zero, Vector2.new(960, 544), Color3.fromRGB(10, 8, 14), 1, Enum.ImageCombineType.Overwrite)
+    bgEditable = AssetService:CreateEditableImage({ Size = Vector2.new(480, 272) })
+    if bgEditable then
+        canvasLabel.ImageContent = Content.fromObject(bgEditable)
     end
 end)
 
--- 4. Layer 2: Character Sprite Layer (Center Stage)
-local charContainer = Instance.new("Frame")
-charContainer.Name = "CharContainer"
-charContainer.Size = UDim2.new(1, 0, 1, 0)
-charContainer.Position = UDim2.new(0, 0, 0, 0)
-charContainer.BackgroundTransparency = 1
-charContainer.ZIndex = 3
-charContainer.Parent = viewportFrame
+pcall(function()
+    charEditable = AssetService:CreateEditableImage({ Size = Vector2.new(480, 280) })
+    if charEditable then
+        charCanvasLabel.ImageContent = Content.fromObject(charEditable)
+    end
+end)
 
-local characterImage = Instance.new("ImageLabel")
-characterImage.Name = "CharacterImage"
-characterImage.Size = UDim2.new(0.68, 0, 0.95, 0)
-characterImage.AnchorPoint = Vector2.new(0.5, 1)
-characterImage.Position = UDim2.new(0.5, 0, 1.05, 0)
-characterImage.BackgroundTransparency = 1
-characterImage.BorderSizePixel = 0
-characterImage.ScaleType = Enum.ScaleType.Fit
-characterImage.Image = "rbxassetid://111092388570647" -- Makoto Naegi / Character default
-characterImage.Parent = charContainer
-
--- 5. Layer 3: Top Bar / Header (Chapter Title, Monokuma Emblem)
+-- 4. Layer 2: Top Bar / Header
 local topBar = Instance.new("Frame")
 topBar.Name = "TopBar"
 topBar.Size = UDim2.new(1, 0, 0.08, 0)
@@ -109,7 +122,7 @@ topBar.Position = UDim2.new(0, 0, 0, 0)
 topBar.BackgroundColor3 = Color3.fromRGB(12, 10, 16)
 topBar.BackgroundTransparency = 0.35
 topBar.BorderSizePixel = 0
-topBar.ZIndex = 5
+topBar.ZIndex = 10
 topBar.Parent = viewportFrame
 
 local topBarStroke = Instance.new("UIStroke")
@@ -120,7 +133,7 @@ topBarStroke.Parent = topBar
 
 local titleLabel = Instance.new("TextLabel")
 titleLabel.Name = "TitleLabel"
-titleLabel.Size = UDim2.new(0.5, 0, 1, 0)
+titleLabel.Size = UDim2.new(0.55, 0, 1, 0)
 titleLabel.Position = UDim2.new(0, 18, 0, 0)
 titleLabel.BackgroundTransparency = 1
 titleLabel.Font = Enum.Font.GothamBlack
@@ -128,10 +141,10 @@ titleLabel.Text = "DANGANRONPA // PROLOGUE: WELCOME TO DESPAIR"
 titleLabel.TextColor3 = Color3.fromRGB(255, 42, 109)
 titleLabel.TextSize = 14
 titleLabel.TextXAlignment = Enum.TextXAlignment.Left
-titleLabel.ZIndex = 6
+titleLabel.ZIndex = 11
 titleLabel.Parent = topBar
 
--- 6. Layer 4: Authentic Danganronpa Dialogue Box
+-- 5. Layer 3: Dialogue Box
 local dialogueContainer = Instance.new("Frame")
 dialogueContainer.Name = "DialogueContainer"
 dialogueContainer.Size = UDim2.new(0.92, 0, 0.28, 0)
@@ -139,7 +152,7 @@ dialogueContainer.Position = UDim2.new(0.04, 0, 0.68, 0)
 dialogueContainer.BackgroundColor3 = Color3.fromRGB(18, 15, 24)
 dialogueContainer.BackgroundTransparency = 0.12
 dialogueContainer.BorderSizePixel = 0
-dialogueContainer.ZIndex = 10
+dialogueContainer.ZIndex = 20
 dialogueContainer.Parent = viewportFrame
 
 local diagCorner = Instance.new("UICorner")
@@ -151,28 +164,28 @@ diagStroke.Color = Color3.fromRGB(255, 42, 109) -- Monokuma Neon Pink
 diagStroke.Thickness = 2.5
 diagStroke.Parent = dialogueContainer
 
--- Diagonal Left Cyan Accent Stripe
+-- Left Cyan Accent Stripe
 local accentStripe = Instance.new("Frame")
 accentStripe.Name = "AccentStripe"
 accentStripe.Size = UDim2.new(0.012, 0, 1, 0)
 accentStripe.Position = UDim2.new(0, 0, 0, 0)
-accentStripe.BackgroundColor3 = Color3.fromRGB(0, 255, 204) -- Neon Cyan
+accentStripe.BackgroundColor3 = Color3.fromRGB(0, 255, 204)
 accentStripe.BorderSizePixel = 0
-accentStripe.ZIndex = 11
+accentStripe.ZIndex = 21
 accentStripe.Parent = dialogueContainer
 
 local stripeCorner = Instance.new("UICorner")
 stripeCorner.CornerRadius = UDim.new(0, 4)
 stripeCorner.Parent = accentStripe
 
--- Speaker Badge (Angled Top-Left Nameplate)
+-- Speaker Badge
 local speakerBadge = Instance.new("Frame")
 speakerBadge.Name = "SpeakerBadge"
 speakerBadge.Size = UDim2.new(0.28, 0, 0.26, 0)
 speakerBadge.Position = UDim2.new(0.02, 0, -0.32, 0)
 speakerBadge.BackgroundColor3 = Color3.fromRGB(26, 20, 36)
 speakerBadge.BorderSizePixel = 0
-speakerBadge.ZIndex = 12
+speakerBadge.ZIndex = 22
 speakerBadge.Parent = dialogueContainer
 
 local badgeCorner = Instance.new("UICorner")
@@ -180,7 +193,7 @@ badgeCorner.CornerRadius = UDim.new(0, 6)
 badgeCorner.Parent = speakerBadge
 
 local badgeStroke = Instance.new("UIStroke")
-badgeStroke.Color = Color3.fromRGB(46, 204, 113) -- Dynamic character color
+badgeStroke.Color = Color3.fromRGB(46, 204, 113)
 badgeStroke.Thickness = 2
 badgeStroke.Parent = speakerBadge
 
@@ -194,7 +207,7 @@ speakerLabel.Text = "Makoto Naegi"
 speakerLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 speakerLabel.TextSize = 17
 speakerLabel.TextXAlignment = Enum.TextXAlignment.Left
-speakerLabel.ZIndex = 13
+speakerLabel.ZIndex = 23
 speakerLabel.Parent = speakerBadge
 
 -- Dialogue Text Label
@@ -204,17 +217,17 @@ dialogueLabel.Size = UDim2.new(1, -48, 1, -26)
 dialogueLabel.Position = UDim2.new(0, 24, 0, 14)
 dialogueLabel.BackgroundTransparency = 1
 dialogueLabel.Font = Enum.Font.GothamMedium
-dialogueLabel.Text = "Hope's Peak Academy..."
+dialogueLabel.Text = ""
 dialogueLabel.TextColor3 = Color3.fromRGB(250, 250, 255)
 dialogueLabel.TextSize = 21
 dialogueLabel.RichText = true
 dialogueLabel.TextWrapped = true
 dialogueLabel.TextXAlignment = Enum.TextXAlignment.Left
 dialogueLabel.TextYAlignment = Enum.TextYAlignment.Top
-dialogueLabel.ZIndex = 12
+dialogueLabel.ZIndex = 22
 dialogueLabel.Parent = dialogueContainer
 
--- Blinking Continue Arrow
+-- Continue Arrow Indicator
 local nextArrow = Instance.new("TextLabel")
 nextArrow.Name = "NextArrow"
 nextArrow.Size = UDim2.new(0, 28, 0, 28)
@@ -225,7 +238,7 @@ nextArrow.Text = "▶"
 nextArrow.TextColor3 = Color3.fromRGB(255, 42, 109)
 nextArrow.TextSize = 22
 nextArrow.Visible = false
-nextArrow.ZIndex = 14
+nextArrow.ZIndex = 24
 nextArrow.Parent = dialogueContainer
 
 task.spawn(function()
@@ -241,13 +254,13 @@ task.spawn(function()
     end
 end)
 
--- 7. Action Buttons Bar (Top-Right: AUTO, SKIP, LOG, NEXT)
+-- 6. Action Controls Bar (Top-Right)
 local controlsFrame = Instance.new("Frame")
 controlsFrame.Name = "ControlsFrame"
 controlsFrame.Size = UDim2.new(0.42, 0, 0.055, 0)
 controlsFrame.Position = UDim2.new(0.55, 0, 0.015, 0)
 controlsFrame.BackgroundTransparency = 1
-controlsFrame.ZIndex = 20
+controlsFrame.ZIndex = 30
 controlsFrame.Parent = viewportFrame
 
 local layout = Instance.new("UIListLayout")
@@ -267,7 +280,7 @@ local function createBtn(text: string, order: number, onClick: () -> ())
     btn.TextColor3 = Color3.fromRGB(220, 220, 220)
     btn.TextSize = 13
     btn.LayoutOrder = order
-    btn.ZIndex = 21
+    btn.ZIndex = 31
     btn.Parent = controlsFrame
 
     local corner = Instance.new("UICorner")
@@ -283,127 +296,18 @@ local function createBtn(text: string, order: number, onClick: () -> ())
     return btn
 end
 
--- 8. Visual Novel Story Script Sequence (Chapter 0: Prologue)
-local STORY_SCRIPT = {
-    {
-        speaker = "Makoto Naegi (Thought)",
-        color = Color3.fromRGB(160, 192, 255),
-        text = "<CLT 4>The massive high school towers over all the other buildings in this bustling urban area.<CLT>",
-        background = "SchoolExterior",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_030.png",
-        character = "makoto_naegi",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/makoto_naegi/makoto_naegi_00.png",
-        charVisible = false,
-    },
-    {
-        speaker = "Makoto Naegi (Thought)",
-        color = Color3.fromRGB(160, 192, 255),
-        text = "<CLT 4>It's like the school stands at the center of the entire world.<CLT>",
-        background = "SchoolExterior",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_030.png",
-        charVisible = false,
-    },
-    {
-        speaker = "Makoto Naegi (Thought)",
-        color = Color3.fromRGB(160, 192, 255),
-        text = "<CLT 4>Hope's Peak Academy... It brings in top students from every field imaginable.<CLT>",
-        background = "SchoolExterior",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_030.png",
-        charVisible = false,
-    },
-    {
-        speaker = "Makoto Naegi (Thought)",
-        color = Color3.fromRGB(160, 192, 255),
-        text = "<CLT 4>It was built to raise <CLT 3>hope<CLT> in the nation's future. Which makes <CLT 3>Hope's Peak<CLT> a pretty fitting name.<CLT>",
-        background = "SchoolExterior",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_030.png",
-        charVisible = false,
-    },
-    {
-        speaker = "Makoto Naegi (Thought)",
-        color = Color3.fromRGB(160, 192, 255),
-        text = "<CLT 4>...Huh? What happened? Where am I? The classroom windows... They're bolted shut with massive iron plates!<CLT>",
-        background = "Classroom",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_002.png",
-        character = "makoto_naegi",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/makoto_naegi/makoto_naegi_01.png",
-        charVisible = true,
-        shake = true,
-    },
-    {
-        speaker = "Makoto Naegi (Thought)",
-        color = Color3.fromRGB(160, 192, 255),
-        text = "<CLT 4>I ran out into the hallway and made my way to the entrance hall...<CLT>",
-        background = "MainHallway",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_013.png",
-        charVisible = false,
-    },
-    {
-        speaker = "Sayaka Maizono",
-        color = Color3.fromRGB(0, 210, 211),
-        text = "Um, excuse me... Are you Makoto Naegi from Sixth Black High?",
-        background = "Cafeteria",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_010.png",
-        character = "sayaka_maizono",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/sayaka_maizono/sayaka_maizono_00.png",
-        charVisible = true,
-    },
-    {
-        speaker = "Makoto Naegi",
-        color = Color3.fromRGB(46, 204, 113),
-        text = "Y-Yeah, that's me! Sayaka Maizono... The <CLT 3>Ultimate Pop Sensation<CLT>! You remember me?!",
-        background = "Cafeteria",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_010.png",
-        character = "makoto_naegi",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/makoto_naegi/makoto_naegi_00.png",
-        charVisible = true,
-    },
-    {
-        speaker = "Kyoko Kirigiri",
-        color = Color3.fromRGB(155, 89, 182),
-        text = "If you two are done reminiscing, we have more urgent matters to attend to.",
-        background = "Cafeteria",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_010.png",
-        character = "kyoko_kirigiri",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/kyoko_kirigiri/kyoko_kirigiri_00.png",
-        charVisible = true,
-    },
-    {
-        speaker = "Byakuya Togami",
-        color = Color3.fromRGB(241, 196, 15),
-        text = "Hmph. It seems everyone gathered here is completely clueless. How pathetic.",
-        background = "Cafeteria",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_010.png",
-        character = "byakuya_togami",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/byakuya_togami/byakuya_togami_00.png",
-        charVisible = true,
-    },
-    {
-        speaker = "Monokuma",
-        color = Color3.fromRGB(235, 47, 6),
-        text = "<CLT 1>Upupupu~! Mic test, mic test! Is everyone in the gym? Let the killing school life begin!<CLT>",
-        background = "Gymnasium",
-        bgUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/backgrounds/bgd_014.png",
-        character = "monokuma",
-        charUrl = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/characters/monokuma/monokuma_00.png",
-        charVisible = true,
-        flash = true,
-        shake = true,
-    },
-}
-
--- 9. Engine Loop State
-local currentStepIndex = 1
-local isTyping = false
-local isAuto = false
-local isSkip = false
-
+-- 7. RichText Tag Formatter with Strict Matching
 local function formatRichText(rawText: string): string
     local text = rawText
-    text = string.gsub(text, "<CLT%s*3>", '<font color="#00ffcc"><b>')
-    text = string.gsub(text, "<CLT%s*4>", '<font color="#99bbff"><i>')
-    text = string.gsub(text, "<CLT%s*1>", '<font color="#ff2a6d"><b>')
-    text = string.gsub(text, "<CLT>", "</b></i></font>")
+    -- Convert CLT 3 (Keywords) -> Neon Cyan bold
+    text = string.gsub(text, "<CLT%s*3>(.-)<CLT>", '<font color="#00ffcc"><b>%1</b></font>')
+    -- Convert CLT 4 (Inner Monologue) -> Soft Lavender/Blue italics
+    text = string.gsub(text, "<CLT%s*4>(.-)<CLT>", '<font color="#99bbff"><i>%1</i></font>')
+    -- Convert CLT 1 (Crimson / Monokuma) -> Hot Pink bold
+    text = string.gsub(text, "<CLT%s*1>(.-)<CLT>", '<font color="#ff2a6d"><b>%1</b></font>')
+    -- Strip any residual or unmatched tags
+    text = string.gsub(text, "<CLT%s*%d*>", "")
+    text = string.gsub(text, "<CLT>", "")
     return text
 end
 
@@ -411,24 +315,29 @@ local function stripTags(richText: string): string
     return string.gsub(richText, "<[^>]->", "")
 end
 
+-- Safe Audio Click
 local function playClick()
     task.spawn(function()
-        local sound = Instance.new("Sound")
-        sound.SoundId = "rbxassetid://9114223170"
-        sound.Volume = 0.35
-        sound.Parent = SoundService
-        sound:Play()
-        sound.Ended:Connect(function() sound:Destroy() end)
+        local ok, snd = pcall(function()
+            local sound = Instance.new("Sound")
+            sound.SoundId = "rbxasset://sounds/action_footsteps_plastic.mp3"
+            sound.PlaybackSpeed = 2.4
+            sound.Volume = 0.25
+            sound.Parent = SoundService
+            sound:Play()
+            sound.Ended:Connect(function() sound:Destroy() end)
+            return sound
+        end)
     end)
 end
 
--- Screen Effects (Flash & Shake)
+-- Screen Effects
 local function screenFlash(color: Color3)
     local flashFrame = Instance.new("Frame")
     flashFrame.Size = UDim2.new(1, 0, 1, 0)
     flashFrame.BackgroundColor3 = color
     flashFrame.BackgroundTransparency = 0.1
-    flashFrame.ZIndex = 50
+    flashFrame.ZIndex = 60
     flashFrame.BorderSizePixel = 0
     flashFrame.Parent = viewportFrame
 
@@ -452,27 +361,173 @@ local function screenShake()
     end)
 end
 
--- Advance Scene Step
-local function showStep(idx: number)
-    if idx > #STORY_SCRIPT then
-        idx = 1 -- Loop or finish
+-- 8. Visual Novel Story Sequence
+local STORY_SCRIPT = {
+    {
+        speaker = "Makoto Naegi (Thought)",
+        color = Color3.fromRGB(160, 192, 255),
+        text = "<CLT 4>The massive high school towers over all the other buildings in this bustling urban area.<CLT>",
+        bgBin = "bgd_030.bin",
+        charBin = nil,
+    },
+    {
+        speaker = "Makoto Naegi (Thought)",
+        color = Color3.fromRGB(160, 192, 255),
+        text = "<CLT 4>It's like the school stands at the center of the entire world.<CLT>",
+        bgBin = "bgd_030.bin",
+        charBin = nil,
+    },
+    {
+        speaker = "Makoto Naegi (Thought)",
+        color = Color3.fromRGB(160, 192, 255),
+        text = "<CLT 4>Hope's Peak Academy... It brings in top students from every field imaginable.<CLT>",
+        bgBin = "bgd_030.bin",
+        charBin = nil,
+    },
+    {
+        speaker = "Makoto Naegi (Thought)",
+        color = Color3.fromRGB(160, 192, 255),
+        text = "<CLT 4>It was built to raise <CLT 3>hope<CLT> in the nation's future. Which makes <CLT 3>Hope's Peak<CLT> a pretty fitting name.<CLT>",
+        bgBin = "bgd_030.bin",
+        charBin = nil,
+    },
+    {
+        speaker = "Makoto Naegi (Thought)",
+        color = Color3.fromRGB(160, 192, 255),
+        text = "<CLT 4>...Huh? What happened? Where am I? The classroom windows... They're bolted shut with massive iron plates!<CLT>",
+        bgBin = "bgd_002.bin",
+        charBin = "makoto_naegi_01.bin",
+        shake = true,
+    },
+    {
+        speaker = "Makoto Naegi (Thought)",
+        color = Color3.fromRGB(160, 192, 255),
+        text = "<CLT 4>I ran out into the hallway and made my way to the entrance hall...<CLT>",
+        bgBin = "bgd_013.bin",
+        charBin = nil,
+    },
+    {
+        speaker = "Sayaka Maizono",
+        color = Color3.fromRGB(0, 210, 211),
+        text = "Um, excuse me... Are you Makoto Naegi from Sixth Black High?",
+        bgBin = "bgd_010.bin",
+        charBin = "sayaka_maizono_00.bin",
+    },
+    {
+        speaker = "Makoto Naegi",
+        color = Color3.fromRGB(46, 204, 113),
+        text = "Y-Yeah, that's me! Sayaka Maizono... The <CLT 3>Ultimate Pop Sensation<CLT>! You remember me?!",
+        bgBin = "bgd_010.bin",
+        charBin = "makoto_naegi_00.bin",
+    },
+    {
+        speaker = "Kyoko Kirigiri",
+        color = Color3.fromRGB(155, 89, 182),
+        text = "If you two are done reminiscing, we have more urgent matters to attend to.",
+        bgBin = "bgd_010.bin",
+        charBin = "kyoko_kirigiri_00.bin",
+    },
+    {
+        speaker = "Byakuya Togami",
+        color = Color3.fromRGB(241, 196, 15),
+        text = "Hmph. It seems everyone gathered here is completely clueless. How pathetic.",
+        bgBin = "bgd_010.bin",
+        charBin = "byakuya_togami_00.bin",
+    },
+    {
+        speaker = "Monokuma",
+        color = Color3.fromRGB(235, 47, 6),
+        text = "<CLT 1>Upupupu~! Mic test, mic test! Is everyone in the gym? Let the killing school life begin!<CLT>",
+        bgBin = "bgd_014.bin",
+        charBin = "monokuma_00.bin",
+        flash = true,
+        shake = true,
+    },
+}
+
+-- 9. HTTP Raw Pixel Streaming to EditableImage
+local RAW_BASE_URL = "https://raw.githubusercontent.com/Deadstillplays/DageStanRope/main/pixels"
+local LOCAL_BASE_URL = "http://localhost:8089/pixels"
+local pixelCache = {} :: { [string]: buffer }
+
+local function loadPixelBuffer(subPath: string): buffer?
+    if pixelCache[subPath] then
+        return pixelCache[subPath]
     end
+
+    local endpoints = {
+        string.format("%s/%s", RAW_BASE_URL, subPath),
+        string.format("%s/%s", LOCAL_BASE_URL, subPath),
+    }
+
+    for _, url in ipairs(endpoints) do
+        local ok, data = pcall(function()
+            return HttpService:GetAsync(url)
+        end)
+        if ok and data and #data > 1000 then
+            local buf = buffer.fromstring(data)
+            pixelCache[subPath] = buf
+            return buf
+        end
+    end
+    return nil
+end
+
+-- Draw Procedural Backdrop if HTTP is not enabled yet
+local function drawProceduralBackdrop(bgName: string)
+    if not bgEditable then return end
+    pcall(function()
+        -- Cool dark slate floor & grid
+        bgEditable:DrawRectangle(Vector2.zero, Vector2.new(480, 272), Color3.fromRGB(22, 18, 28), 0, Enum.ImageCombineType.Overwrite)
+        -- Wall border
+        bgEditable:DrawRectangle(Vector2.new(0, 0), Vector2.new(480, 160), Color3.fromRGB(36, 28, 44), 0, Enum.ImageCombineType.Overwrite)
+        -- Neon accent line
+        bgEditable:DrawRectangle(Vector2.new(0, 158), Vector2.new(480, 4), Color3.fromRGB(255, 42, 109), 0, Enum.ImageCombineType.Overwrite)
+    end)
+end
+
+-- 10. Engine Step Execution
+local currentStepIndex = 1
+local isTyping = false
+local isAuto = false
+local isSkip = false
+
+local function showStep(idx: number)
+    if idx > #STORY_SCRIPT then idx = 1 end
     currentStepIndex = idx
     local step = STORY_SCRIPT[idx]
 
-    -- 1. Update Speaker
+    -- 1. Speaker
     speakerLabel.Text = step.speaker
     badgeStroke.Color = step.color or Color3.fromRGB(46, 204, 113)
 
-    -- 2. Update Character Visibility & Sprite
-    characterImage.Visible = (step.charVisible == true)
-    if step.charUrl then
-        characterImage.Image = step.charUrl
+    -- 2. Background Stream to EditableImage
+    if step.bgBin then
+        task.spawn(function()
+            local buf = loadPixelBuffer("backgrounds/" .. step.bgBin)
+            if buf and bgEditable then
+                pcall(function()
+                    bgEditable:WritePixelsBuffer(Vector2.zero, Vector2.new(480, 272), buf)
+                end)
+            else
+                drawProceduralBackdrop(step.bgBin)
+            end
+        end)
     end
 
-    -- 3. Update Background
-    if step.bgUrl then
-        backgroundLabel.Image = step.bgUrl
+    -- 3. Character Stream to EditableImage
+    if step.charBin then
+        charCanvasLabel.Visible = true
+        task.spawn(function()
+            local buf = loadPixelBuffer("characters/" .. step.charBin)
+            if buf and charEditable then
+                pcall(function()
+                    charEditable:WritePixelsBuffer(Vector2.zero, Vector2.new(480, 280), buf)
+                end)
+            end
+        end)
+    else
+        charCanvasLabel.Visible = false
     end
 
     -- 4. Effects
@@ -502,7 +557,7 @@ local function showStep(idx: number)
         while curLen < totalChars and isTyping do
             curLen += 1
             dialogueLabel.Text = string.sub(plain, 1, curLen)
-            if curLen % 3 == 0 then playClick() end
+            if curLen % 4 == 0 then playClick() end
             task.wait(typeSpeed)
         end
 
@@ -521,13 +576,13 @@ end
 
 local function advance()
     if isTyping then
-        isTyping = false -- Complete current text immediately
+        isTyping = false
     else
         showStep(currentStepIndex + 1)
     end
 end
 
--- 10. Buttons & Controls Setup
+-- 11. Buttons & Controls Setup
 local autoBtn = createBtn("AUTO", 1, function()
     isAuto = not isAuto
     autoBtn.TextColor3 = isAuto and Color3.fromRGB(0, 255, 204) or Color3.fromRGB(220, 220, 220)
@@ -544,7 +599,7 @@ createBtn("NEXT ▶", 3, function()
     advance()
 end)
 
--- 11. User Inputs (Space, Enter, Click)
+-- 12. Input Listeners
 dialogueContainer.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
         advance()
@@ -566,13 +621,13 @@ UserInputService.InputBegan:Connect(function(input, processed)
     end
 end)
 
--- Start playing Step 1
+-- Start playing
 task.spawn(function()
     task.wait(0.2)
     showStep(1)
 end)
 
-print("[DanganronpaClient] GUI and visual novel loop active!")
+print("[DanganronpaClient] Engine active! Visual novel running.")
 ]]></ProtectedString>
 		</Properties>
 	</Item>
